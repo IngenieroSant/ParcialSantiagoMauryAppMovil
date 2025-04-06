@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ParcialSantiagoMaury</string>
+    <string name="icono_usuario">Icono usuario</string>
+    <string name="correo_electronico">Correo Electrónico</string>
+    <string name="contraseña">Contraseña</string>
+    <string name="acepta_terminos">Acepto términos y condiciones</string>
+    <string name="recordar_contraseña">Recordar contraseña</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="registrar">Registrar</string>
+</resources>
