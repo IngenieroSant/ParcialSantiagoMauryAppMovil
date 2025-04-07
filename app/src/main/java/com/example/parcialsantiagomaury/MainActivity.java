@@ -37,28 +37,28 @@ public class MainActivity extends AppCompatActivity {
 
         btnIngresar.setEnabled(false);
 
-        // Validación dinámica con TextWatcher
+
         TextWatcher watcher = new SimpleTextWatcher(() -> validarCampos());
         etCorreo.addTextChangedListener(watcher);
         etPassword.addTextChangedListener(watcher);
         cbTerminos.setOnClickListener(v -> validarCampos());
 
-        // Mostrar mensaje recordar contraseña
+
         tvRecordar.setOnClickListener(v ->
                 Toast.makeText(this, "Recordar Contraseña", Toast.LENGTH_SHORT).show()
         );
 
-        // Acción del botón Registrar
+
         btnRegistrar.setOnClickListener(v ->
                 Toast.makeText(this, "Proceso de Registro", Toast.LENGTH_SHORT).show()
         );
 
-        // Acción del botón Ingresar
+
         btnIngresar.setOnClickListener(v ->
                 Toast.makeText(this, "Ingresando al sistema", Toast.LENGTH_SHORT).show()
         );
 
-        // Mostrar/ocultar contraseña con ícono
+
         etPassword.setOnTouchListener((v, event) -> {
             final int DRAWABLE_END = 2;
 
@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
 
                     etPassword.setSelection(etPassword.getText().length());
 
-                    v.performClick(); // 👈 Esto soluciona la advertencia
+                    v.performClick();
                     return true;
                 }
             }
@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
         btnIngresar.setEnabled(correoValido && passValido && aceptaTerminos);
     }
 
-    // Clase para escuchar cambios en el texto
+
     private static class SimpleTextWatcher implements TextWatcher {
 
         private final Runnable onTextChangedCallback;
@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-            // no-op
+
         }
 
         @Override
@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void afterTextChanged(Editable s) {
-            // no-op
+        
         }
     }
 }
